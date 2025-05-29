@@ -1,12 +1,12 @@
 ---
 title: "Christopher Kiorlinski"
-1image: IMG_0711.jpeg
-2toc: false
+image: IMG_0711.jpeg
+toc: false
 about: 
-3  template: broadside
-4  image-shape: round
+  template: broadside
+  image-shape: round
   image-width: 17em
-5  links:
+  links:
     - text: LinkedIn
       href: https://www.linkedin.com/in/christopher-kiorlinski/
     - text: GitHub
