@@ -11,6 +11,7 @@ website:
       - about.qmd
       - projectpage.qmd
       - hobbies.qmd
+      - resume.qmd
 
 format:
   html:
