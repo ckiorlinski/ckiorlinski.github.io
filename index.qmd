@@ -1,5 +1,18 @@
 ---
 title: "Christopher Kiorlinski"
+1image: IMG_0711.jpeg
+2toc: false
+about: 
+3  template: broadside
+4  image-shape: round
+  image-width: 17em
+5  links:
+    - text: LinkedIn
+      href: https://www.linkedin.com/in/christopher-kiorlinski/
+    - text: GitHub
+      href: https://github.com/ckiorlinski
+    - text: Email
+      href: ckiorlinski@ucsb.edu
 ---
 
 Hi! My name is Christopher Kiorlinski! I love R Studio! I wake up every day and hop on r studio and run some analysis! I LOVE GGPLOT! ooooo ahhh oh man i love github i wish i could be uploaded to a repository mmphhrrgph.....
