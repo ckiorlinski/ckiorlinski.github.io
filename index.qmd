@@ -1,11 +1,5 @@
 ---
-title: "ckiorlinski.github.io"
+title: "Christopher Kiorlinski"
 ---
 
-This is a Quarto website.
-
-To learn more about Quarto websites visit <https://quarto.org/docs/websites>.
-
-```{r}
-1 + 1
-```
+Hi! My name is Christopher Kiorlinski! I love R Studio! I wake up every day and hop on r studio and run some analysis! I LOVE GGPLOT! ooooo ahhh oh man i love github i wish i could be uploaded to a repository mmphhrrgph.....
