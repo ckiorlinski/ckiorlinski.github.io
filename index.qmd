@@ -3,16 +3,19 @@ title: "Christopher Kiorlinski"
 image: IMG_0711.jpeg
 toc: false
 about: 
-  template: broadside
-  image-shape: round
-  image-width: 17em
+  template: trestles
   links:
     - text: LinkedIn
       href: https://www.linkedin.com/in/christopher-kiorlinski/
     - text: GitHub
       href: https://github.com/ckiorlinski
     - text: Email
-      href: ckiorlinski@ucsb.edu
+      href: mailto::ckiorlinski@ucsb.edu
 ---
+**Welcome!**
 
-Hi! My name is Christopher Kiorlinski! I love R Studio! I wake up every day and hop on r studio and run some analysis! I LOVE GGPLOT! ooooo ahhh oh man i love github i wish i could be uploaded to a repository mmphhrrgph.....
+I am a highly passionate and detail-driven Environmental Scientist with a solid foundation in data analysis, technical writing, field work, public outreach, and more. Having recently graduated from University of California, Santa Barbara with a Bachelors of Science in Environmental Studies, I am excited to begin advancing environmental sustainability through innovative solutions.
+
+------------------------------------------------------------------------
+
+I am currently seeking new employment after graduation, so please reach out  if you have any opportunities!
