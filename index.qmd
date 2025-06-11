@@ -12,10 +12,11 @@ about:
     - text: Email
       href: mailto::ckiorlinski@ucsb.edu
 ---
+
 **Welcome!**
 
 I am a highly passionate and detail-driven Environmental Scientist with a solid foundation in data analysis, technical writing, field work, public outreach, and more. Having recently graduated from University of California, Santa Barbara with a Bachelors of Science in Environmental Studies, I am excited to begin advancing environmental sustainability through innovative solutions.
 
 ------------------------------------------------------------------------
 
-I am currently seeking new employment after graduation, so please reach out  if you have any opportunities!
+I am currently seeking new employment after graduation, so please reach out if you have any opportunities!
