@@ -2,3 +2,21 @@
 title: "My Interests"
 format: html
 ---
+
+##### What Drives Me
+
+In my opinion, it is the passion of the environmentalist that is their greatest weapon. It is what keeps us vitalized and ready to tackle problems at an immense scale despite the overwhelming amount of depressing and upsetting information that we are privy to. In the face of this dread, environmentalists such as myself only have our passion and hope for the future to hold on to and give comfort. In a field as volatile and immediately relevant as our global environmental systems, whether it be climate, ecology, or energy, there is thankfully a lot to be passionate about. Here are some of the topics that drive me in this field.
+
+### Environmental Microbiology
+
+Environmental microbiology investigates how the interactions of microorganisms with each other and their environment shape microbial communities and their roles in ecosystems. This field investigate these microorganisms as both agents of environmental degradation and potential solutions through bioremediation, although I am primarily interested in the bioremediation aspect. Through cultivation of specific environments or genetic editing, microorganisms can achieve amazing feats, such as pollutant removal or energy production.
+
+The primary application of this that I am interested in is anaerobic digestion as a method of dually producing energy and reducing landfill waste. This natural process consists of a series of biochemical reactions where bacteria break down organic matter of any substrate into a gaseous mixture (CH4, CO2, H2, H2S, etc.) in the absence of free oxygen. The main byproduct of this process is biogas, a mix of methane and carbon dioxide, which can be used for power or heat generation. The digested solid waste, called digestate, can be separated into liquid and solid streams, both of which contain valuable plant nutrients that can be used as fertilizer in agricultural applications.
+
+![Example Diagram of Digestor](photos/anaerobic.png){width="8in"}
+
+### Advanced Plastic Recycling via Pyrolysis
+
+Pyrolysis is a thermochemical recycling method that decomposes plastic waste at extreme temperatures in an anaerobic setting to break down polymers into useful compounds, such as pyrolysis oil, fuel gas, and carbon char. Although this process is still new and facing backlash for several downsides, including emissions, scalability, and economic viability, I believe that this technology is an important piece of the circular economy needed to maintain human life on this planet.
+
+![Pyrolysis Diagram](photos/pyrolysis.webp){width="8in"}
