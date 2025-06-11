@@ -16,7 +16,7 @@ website:
 format:
   html:
     theme: styles.scss
-    mainfont: Funnel Sansq
+    mainfont: Funnel Sans
     toc: true
     page-layout: full
 
