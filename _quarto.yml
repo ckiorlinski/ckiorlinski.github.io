@@ -16,7 +16,7 @@ website:
 format:
   html:
     theme: styles.scss
-    mainfont: Funnel Sans
+    mainfont: Nunito
     toc: true
     page-layout: full
 
