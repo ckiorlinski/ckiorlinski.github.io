@@ -7,18 +7,17 @@ website:
   navbar:
     left:
       - href: about.qmd
-      - hobbies.qmd
-      - projectpage.qmd
+      - href: hobbies.qmd
+      - href: projectpage.qmd
       - text: "Resume"
-        href: ckresumepdf(662025) (1).pdf    
-        target: "_blank" 
+        href: "ckresumepdf(662025) (1).pdf"
+        target: "_blank"
 
 format:
   html:
     theme: flatly
-    css: styles.css
+    css: styles.scss     # <-- compile this SCSS _after_ the theme
     toc: true
     page-layout: full
 
 editor: visual
-

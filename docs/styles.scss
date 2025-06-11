@@ -1,0 +1,38 @@
+/*-- scss:defaults --*/
+
+/* Pull down Funnel Sans from Google */
+@import url('https://fonts.googleapis.com/css2?family=Funnel+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
+// override Bootstrap/Flatly colors
+$sunset-orange: #FA5F55;
+$cream:         #FBF9F3;
+$white:         #FFF;
+
+$body-bg:       $cream;
+$navbar-bg:     $sunset-orange;
+$navbar-hl:     $white;
+
+// Force body font to Funnel Sans
+body {
+  font-family: 'Funnel Sans', sans-serif;
+}
+
+// And nav links, headings, etc.
+h1, h2, h3, h4, h5, h6,
+.navbar, .navbar a {
+  font-family: 'Funnel Sans', sans-serif !important;
+  color: $navbar-hl !important;
+}
+
+body {
+  background-color: #FBF9F3 !important;  /* cream */
+}
+
+.navbar {
+  background-color: #FF5500 !important;  /* sunset-orange */
+}
+
+.navbar a,
+.navbar-brand {
+  color: #FFF !important;                /* white text in nav */
+}
