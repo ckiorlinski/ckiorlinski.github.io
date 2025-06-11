@@ -15,8 +15,8 @@ website:
 
 format:
   html:
-    theme: flatly
-    css: styles.scss        # This compiles and includes your SCSS styles
+    theme: styles.scss
+    mainfont: Funnel Sansq
     toc: true
     page-layout: full
 
