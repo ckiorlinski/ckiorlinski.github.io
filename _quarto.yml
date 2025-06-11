@@ -6,12 +6,12 @@ website:
   title: "Christopher Kiorlinski"
   navbar:
     left:
-      - href: index.qmd
-        text: Home
-      - about.qmd
+      - href: about.qmd
       - hobbies.qmd
       - projectpage.qmd
-      - resume.qmd
+      - text: "Resume"
+        href: ckresumepdf(662025) (1).pdf    
+        target: "_blank" 
 
 format:
   html:
