@@ -1,0 +1,233 @@
+---
+title: "Personal Data Project"
+description: Statistical analysis conducted in R/RStudio based on self-recorded data
+author: Christopher Kiorlinski
+date: 06-12-2025
+lightbox: TRUE
+format: html
+toc: true #sidenav
+execute:
+  message: false # make sure messages don't show up
+  warning: false # make sure warnings don't show up
+---
+
+This statistical analysis was assigned in my ENVS 193DS: Statistics for Environmental Science class.
+
+The question being analyzed was: Does the amount of sleep I get affect my reaction speed when I wake up?
+
+The data was collected by myself and stored in an Excel sheet for later analysis in R Studio. Every morning, the first thing I would do is take a reaction speed test on my mobile device. These reaction speed scores were saved and recorded, then compared to the amount of sleep I had goten that night to see if a relationship existed. Sleep times were binned into three bins: short (\<7 h), moderate (7–8 h), and long (\>8 h), and then mean sleep time was compared across bins.
+
+## Set up
+
+```{r packages-and-data}
+# reading in packages
+library(tidyverse) # general use
+library(here) # file organization
+library(janitor) # cleaning data frames
+library(gt) # table making
+library(readxl) # reading excel files
+library(ggeffects) # getting model predictions
+library(DT) #interactive table
+library(plotly) #interactive graph
+
+
+reaction_time_data <- read.csv("C:/Users/prais/OneDrive/github/ENVS-193DS_homework-03/data/193ds spread - Sheet1.csv") |> #adding table to environment 
+clean_names() |> #cleaning names
+     mutate(
+    sleep_duration_hrs = period_to_seconds(hm(sleep_duration_hh_ss)) / 3600, #changing format of sleep hours data
+    Sleep_Duration_c   = scale(sleep_duration_hrs, center = TRUE, scale = FALSE), # scaling sleep duration colummn
+    Sleep_Location     = factor(sleep_location), # making sleep location a factor
+    Stress_Level       = factor(stress_level), # making stress level a factor
+    Date               = as.Date(date, format = "%Y-%m-%d")) |> # reformating date data
+  mutate(
+    SleepBin = case_when( #creating bins
+      sleep_duration_hrs < 7  ~ "Short (<7 h)", #creating short bin
+      sleep_duration_hrs <= 8 ~ "Moderate (7–8 h)", #creating moderate bin
+      TRUE                     ~ "Long (>8 h)"), #creating long bin
+    SleepBin = factor( #creating order of factors
+      SleepBin,
+      levels = c("Short (<7 h)", "Moderate (7–8 h)", "Long (>8 h)"))) |> # ordering sleep bin factors
+      select(SleepBin, Date, sleep_duration_hh_ss, reaction_speed_ms, x5_test_avg_ms, sleep_location, stress_level) #selecting important info
+
+```
+
+```{r}
+# creating summary table
+summary_table <- reaction_time_data %>%
+  group_by(SleepBin) %>%
+  summarize(
+    mean_rt = mean(reaction_speed_ms, na.rm = TRUE),
+    se      = sd(reaction_speed_ms, na.rm = TRUE) / sqrt(n()),
+    n       = n(),
+    .groups = "drop"
+  ) %>%
+  mutate(
+    ci_low  = mean_rt - qt(0.975, n - 1) * se,
+    ci_high = mean_rt + qt(0.975, n - 1) * se,
+    # round to one decimal place
+    mean_rt = round(mean_rt, 1),
+    ci_low  = round(ci_low,  1),
+    ci_high = round(ci_high, 1)
+  ) %>%
+  mutate(
+    marker = paste0(
+      "Type: ", SleepBin, "<br>",
+      "Mean: ", mean_rt, "<br>",
+      "95% CI: ", ci_low, "–", ci_high
+    )
+  )
+
+```
+
+::: {.callout-note collapse="true"}
+## What is that mutate(marker)?
+
+This function was used to create a hovering tooltip for the interactive figure. The marker function uses the defined titles associated with specific sections of the table's data to create a useful menu.
+
+This function will be used again in the [Data Visualization] code block.
+:::
+
+### Interactive data table
+
+::: {.callout-note collapse="true"}
+## Table Column Definitions
+
+SleepBin: using sleep Duration column, all data points are binned into three bins: short (\<7 h), moderate (7–8 h), and long (\>8 h) sleep times
+
+Date: year, month, and day that the data was recorded. Each point was recorded immediately after waking up that morning
+
+sleep_duration_hh_ss: hours and minutes that I slept on that day
+
+reaction_speed_ms: reaction speed score in milliseconds as tested by <https://humanbenchmark.com/tests/reactiontime>
+
+x5_test_avg_ms: average reaction test score after five attempts of the test
+
+sleep_location: where in my house I had slept that night, either my bed or on my couch.
+
+stress_level: self described stress level for the coming day, including classes, homework, social events, work, etc, recorded using this general metric
+
+1: low stress day
+
+2: moderate stress day
+
+3: high stress day
+
+:::
+
+```{r}
+#interactive table using DT
+
+datatable(data = reaction_time_data)
+```
+
+## Data Visualization
+
+```{r}
+
+# Creating marker for interactive feature
+
+reactiontime_marker <- reaction_time_data |>  #new object using data for marker
+  mutate(marker = paste0("Sleep Bin", SleepBin, "<br>",
+                         "Sleep Hours", sleep_duration_hh_ss, "<br>",
+                         "Sleep Location", sleep_location, "<br>",
+                         "Stress Level", stress_level, "<br>")) 
+```
+
+```{r}
+#plotting graph
+
+reactiontime_static <- ggplot() + #creating graphic
+  geom_jitter( #creating jitterplot
+    data = reactiontime_marker, #using reaction time data
+    aes(
+      x = SleepBin, 
+      y = reaction_speed_ms,
+      color = SleepBin,
+      text = paste0(
+        "Sleep bin: ", SleepBin, "\n",
+        "RT: ", reaction_speed_ms, " ms"
+      )
+    ),
+    width = 0.2, alpha = 0.6, size = 2
+  ) +
+  geom_point( #setting mean point
+    data = summary_table, # summary table data
+    aes(
+      x = SleepBin, 
+      y = mean_rt,
+      text = paste0(
+        "Sleep bin: ", SleepBin, "\n",
+        "Mean RT: ", mean_rt, " ms\n",
+        "95% CI: ", ci_low, "–", ci_high, " ms"
+      )
+    ),
+    color = "black", shape = 18, size = 2
+  ) +
+  geom_errorbar(
+    data = summary_table,
+    aes(
+      x = SleepBin,
+      ymin = ci_low, 
+      ymax = ci_high,
+      text = NULL    # no hover text on the bars themselves
+    ),
+    width = 0.1, color = "black"
+  ) +
+  scale_color_manual( #setting colors
+    values = c(
+      "Short (<7 h)"     = "#D55E00",
+      "Moderate (7–8 h)" = "#E69F00",
+      "Long (>8 h)"      = "#0072B2"
+    ),
+    guide = FALSE
+  ) +
+  labs( #setting titles
+    x     = "Sleep Duration Category", # x axis
+    y     = "Reaction Speed (milliseconds)", # y axis
+    title = "Reaction Speed Varies Across Sleep Duration", # graph title
+    caption = "Figure 1: Getting less than 7 hours of sleep causes a steep decline in reaction time. \n Each point is colored according to its respective bin, which is categorized based on time of sleep. \n The black center dot represents the overall bin mean, with the error bar representing the confidence interval. " # graph caption
+  ) +
+  theme_bw() + # theme black white
+  theme(plot.caption.position = "plot", # position of caption
+        plot.caption = element_text(hjust = .5))
+
+reactiontime_interactive <- ggplotly(
+  reactiontime_static,
+  tooltip = "text"
+) |> 
+  # 3) Now apply Plotly’s layout
+  plotly::layout(
+    font = list(family = "Times"),
+    hoverlabel = list(
+      font = list(
+        family = "Times",
+        size   = 13,
+        color  = "#FFFFFF",
+        align  = "left"
+      )
+    )
+  )
+
+```
+
+### Reaction Time Based on Sleep Length Interactive Figure
+
+```{r}
+#| echo: false
+
+reactiontime_interactive #print figure
+
+
+```
+
+### Affective visualization
+
+![Artwork by Christopher Kiorlinski, All Rights Reserved](nueronsvisual.jpg)
+
+With this piece, I am attempting to showcase the takeaway of my experiment, which is that the amount of sleep has an effect on the reaction speed score on an online speed test immediately after waking up. The data was collected over two months and sorted into three bins: short (\<7 h), moderate (7–8 h), and long (\>8 h), and then mean sleep time was compared across bins.
+
+When creating this piece, I wanted to incorporate several relevant themes into the visualization of this data, including concepts of tiredness, energy, and alertness. Although it might not look explicitly similar, I took a lot of inspiration from Jill Pelto's paintings, specifically their ingraining of the geometry of the line in the art.
+
+The form of my work is a drawn picture on paper using a combination of colored pencils, markers, lead pencils, and more. Conceptually, each bin is represented by a neuron with each data point being represented by a dendrite upon the axon, which is itself a representation of the error bars. The hope is to show that more sleep creates more complex neural connections with shorter pathways.
+
+Before it took this form, my first sketch had more of a night and day gradient motif using an eye to stage the data, but I didn't like it very much and scrapped it. This version was sketched in MS Paint before being put to paper and drawn with strong lines and colors. I recieved feedback that the message of the data isn't immediately apparent, so I could improve that if I redid this visualization.
