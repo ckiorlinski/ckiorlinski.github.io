@@ -1,0 +1,48 @@
+---
+title: "Identifying Marine Areas At Risk for Whale Disturbance in Southern California"
+description: A captsone research project using ArcGIS Pro
+author: Christopher Kiorlinski
+date: 06-05-2025
+lightbox: TRUE
+format: html
+---
+
+This research was the capstone project for the Geographic Information Systems/GIS course at UCSB. The instructor that directed this project was Professor Peter Kedron of the Geography department, alongside his TA team of graduate students.
+
+After the research was completed on ArcGIS, a poster symposium was held at Ellison Hall, home of the geography department at UCSB. Attendees included instructors, students, and local professionals.
+
+## Poster
+
+![GIS Research Poster](gisposter.jpg)
+
+## Digital Artifact: Ersi Story Map
+
+In addition to our physical poster, our team created an online visual storymap: <https://arcg.is/1ym8jr2>
+
+## Project Description
+
+North American Blue Whales, Balaenoptera musculus, are the largest endangered species that inhabit the waters of the California coast (Fisheries, 2020). Blue Whales, along with other large mammals, face escalating threats due to human impact such as overfishing, underwater noise pollution, and ship strikes due to maritime activity (McKenna, 2011).
+
+This project investigates areas of Blue Whale migration in the marine corridor between the Port of Hueneme and Santa Cruz Island– a marine area known for high vessel activity. By analyzing these two variables, our group aims to create visualizations that may aid in identifying high risk areas for blue whales and shipping vessels.
+
+## Research Question
+
+In the marine area between the Port of Hueneme and Santa Cruz Island, what areas of maritime commercial activity are at risk of contributing to the disturbance of North Pacific Blue Whale populations?
+
+## Figures
+
+![Figure 2: Continuous surface of vessel-traffic influence created using Inverse Distance Weighted (IDW) interpolation around statistically significant traffic hotspots. The surface reflects the potential acoustic disturbance zone extending \\\~4 km from dense traffic areas. Higher values (in red) represent stronger potential influence from vessel activity.](figure2.jpg){width="5.33in"}
+
+![Figure 3: Spatial risk surface created by multiplying whale sighting counts per 1 km² cell with IDW-derived vessel disturbance values. The resulting risk score highlights areas of greatest overlap between migrating Blue Whales and vessel activity. Warmer colors represent higher potential for acoustic disturbance or ship strike. This model identifies high-priority zones for conservation or traffic mitigation.](figure3.jpg){width="5.33in"}
+
+## Results
+
+-   Specific areas likely exist in the marine area between the Port of Hueneme and Santa Cruz Island that are at risk of contributing to the disturbance of North Pacific Blue Whale populations.
+-   These areas align with the widely used north and south bound shipping routes.
+-   Extra precautions need to be taken in these high vessel volume areas to reduce interference with migrating blue whales.
+
+## Acknowledgements
+
+Special thanks to Professors Kedron, Dodge, and Baik, along with the UCSB Department of Geography, for providing the instruction, guidance, and resources neccisary for the completion of this research project.
+
+I would also like to thank my group mates Gabrielle Domingo and Christine Chen for their hard work on this project.

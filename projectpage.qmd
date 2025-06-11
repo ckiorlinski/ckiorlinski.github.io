@@ -1,4 +1,12 @@
 ---
 title: "My Projects"
+listing:
+  contents: posts
+  type: default
+  categories: true
+search: true
+page-layout: full
 format: html
 ---
+
+A collection of some of the projects I've been working on. If you have any questions about the work listed here, please contact me with the links on the landing page and I'll happily answer!

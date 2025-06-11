@@ -18,6 +18,83 @@
     "href": "hobbies.html",
     "title": "My Interests",
     "section": "",
-    "text": "What Drives Me\nIn my opinion, it is the passion of the environmentalist that is their greatest weapon. It is what keeps us vitalized and ready to tackle problems at an immense scale despite the overwhelming amount of depressing and upsetting information that we are privy to. In the face of this dread, environmentalists such as myself only have our passion and hope for the future to hold on to and give comfort. In a field as volatile and immediately relevant as our global environmental systems, whether it be climate, ecology, or energy, there is thankfully a lot to be passionate about. Here are some of the topics that drive me in this field.\n\n\nEnvironmental Microbiology\nEnvironmental microbiology investigates how the interactions of microorganisms with each other and their environment shape microbial communities and their roles in ecosystems. This field investigate these microorganisms as both agents of environmental degradation and potential solutions through bioremediation, although I am primarily interested in the bioremediation aspect. Through cultivation of specific environments or genetic editing, microorganisms can achieve amazing feats, such as pollutant removal or energy production.\nThe primary application of this that I am interested in is anaerobic digestion as a method of dually producing energy and reducing landfill waste. This natural process consists of a series of biochemical reactions where bacteria break down organic matter of any substrate into a gaseous mixture (CH4, CO2, H2, H2S, etc.) in the absence of free oxygen. The main byproduct of this process is biogas, a mix of methane and carbon dioxide, which can be used for power or heat generation. The digested solid waste, called digestate, can be separated into liquid and solid streams, both of which contain valuable plant nutrients that can be used as fertilizer in agricultural applications.\n\n\n\nExample Diagram of Digestor\n\n\n\n\nAdvanced Plastic Recycling via Pyrolysis\nPyrolysis is a thermochemical recycling method that decomposes plastic waste at extreme temperatures in an anaerobic setting to break down polymers into useful compounds, such as pyrolysis oil, fuel gas, and carbon char. Although this process is still new and facing backlash for several downsides, including emissions, scalability, and economic viability, I believe that this technology is an important piece of the circular economy needed to maintain human life on this planet.\n\n\n\nPyrolysis Diagram"
+    "text": "In my opinion, it is the passion of the environmentalist that is their greatest weapon. It is what keeps us vitalized and ready to tackle problems at an immense scale despite the overwhelming amount of depressing and upsetting information that we are privy to. In the face of this dread, environmentalists such as myself only have our passion and hope for the future to hold on to and give comfort. In a field as volatile and immediately relevant as our global environmental systems, whether it be climate, ecology, or energy, there is thankfully a lot to be passionate about. Here are some of the topics that drive me in this field."
+  },
+  {
+    "objectID": "projectpage.html",
+    "href": "projectpage.html",
+    "title": "My Projects",
+    "section": "",
+    "text": "A collection of some of the projects I’ve been working on. If you have any questions about the work listed here, please contact me with the links on the landing page and I’ll happily answer!\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nIdentifying Marine Areas At Risk for Whale Disturbance in Southern California\n\n\n\n\n\nA captsone research project using ArcGIS Pro\n\n\n\n\n\nJun 5, 2025\n\n\nChristopher Kiorlinski\n\n\n\n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "posts/gis project/index.html",
+    "href": "posts/gis project/index.html",
+    "title": "Identifying Marine Areas At Risk for Whale Disturbance in Southern California",
+    "section": "",
+    "text": "This research was the capstone project for the Geographic Information Systems/GIS course at UCSB. The instructor that directed this project was Professor Peter Kedron of the Geography department, alongside his TA team of graduate students.\nAfter the research was completed on ArcGIS, a poster symposium was held at Ellison Hall, home of the geography department at UCSB. Attendees included instructors, students, and local professionals."
+  },
+  {
+    "objectID": "posts/gis project/index.html#poster",
+    "href": "posts/gis project/index.html#poster",
+    "title": "Identifying Marine Areas At Risk for Whale Disturbance in Southern California",
+    "section": "Poster",
+    "text": "Poster\n\n\n\nGIS Research Poster"
+  },
+  {
+    "objectID": "posts/gis project/index.html#digital-artifact-ersi-story-map",
+    "href": "posts/gis project/index.html#digital-artifact-ersi-story-map",
+    "title": "Identifying Marine Areas At Risk for Whale Disturbance in Southern California",
+    "section": "Digital Artifact: Ersi Story Map",
+    "text": "Digital Artifact: Ersi Story Map\nIn addition to our physical poster, our team created an online visual storymap: https://arcg.is/1ym8jr2"
+  },
+  {
+    "objectID": "hobbies.html#environmental-microbiology",
+    "href": "hobbies.html#environmental-microbiology",
+    "title": "My Interests",
+    "section": "Environmental Microbiology",
+    "text": "Environmental Microbiology\nEnvironmental microbiology investigates how the interactions of microorganisms with each other and their environment shape microbial communities and their roles in ecosystems. This field investigate these microorganisms as both agents of environmental degradation and potential solutions through bioremediation, although I am primarily interested in the bioremediation aspect. Through cultivation of specific environments or genetic editing, microorganisms can achieve amazing feats, such as pollutant removal or energy production.\nThe primary application of this that I am interested in is anaerobic digestion as a method of dually producing energy and reducing landfill waste. This natural process consists of a series of biochemical reactions where bacteria break down organic matter of any substrate into a gaseous mixture (CH4, CO2, H2, H2S, etc.) in the absence of free oxygen. The main byproduct of this process is biogas, a mix of methane and carbon dioxide, which can be used for power or heat generation. The digested solid waste, called digestate, can be separated into liquid and solid streams, both of which contain valuable plant nutrients that can be used as fertilizer in agricultural applications.\n\n\n\nExample Diagram of Digestor"
+  },
+  {
+    "objectID": "hobbies.html#advanced-plastic-recycling-via-pyrolysis",
+    "href": "hobbies.html#advanced-plastic-recycling-via-pyrolysis",
+    "title": "My Interests",
+    "section": "Advanced Plastic Recycling via Pyrolysis",
+    "text": "Advanced Plastic Recycling via Pyrolysis\nPyrolysis is a thermochemical recycling method that decomposes plastic waste at extreme temperatures in an anaerobic setting to break down polymers into useful compounds, such as pyrolysis oil, fuel gas, and carbon char. Although this process is still new and facing backlash for several downsides, including emissions, scalability, and economic viability, I believe that this technology is an important piece of the circular economy needed to maintain human life on this planet.\n\n\n\nPyrolysis Diagram"
+  },
+  {
+    "objectID": "posts/gis project/index.html#project-description",
+    "href": "posts/gis project/index.html#project-description",
+    "title": "Identifying Marine Areas At Risk for Whale Disturbance in Southern California",
+    "section": "Project Description",
+    "text": "Project Description\nNorth American Blue Whales, Balaenoptera musculus, are the largest endangered species that inhabit the waters of the California coast (Fisheries, 2020). Blue Whales, along with other large mammals, face escalating threats due to human impact such as overfishing, underwater noise pollution, and ship strikes due to maritime activity (McKenna, 2011).\nThis project investigates areas of Blue Whale migration in the marine corridor between the Port of Hueneme and Santa Cruz Island– a marine area known for high vessel activity. By analyzing these two variables, our group aims to create visualizations that may aid in identifying high risk areas for blue whales and shipping vessels."
+  },
+  {
+    "objectID": "posts/gis project/index.html#research-question",
+    "href": "posts/gis project/index.html#research-question",
+    "title": "Identifying Marine Areas At Risk for Whale Disturbance in Southern California",
+    "section": "Research Question",
+    "text": "Research Question\nIn the marine area between the Port of Hueneme and Santa Cruz Island, what areas of maritime commercial activity are at risk of contributing to the disturbance of North Pacific Blue Whale populations?"
+  },
+  {
+    "objectID": "posts/gis project/index.html#results",
+    "href": "posts/gis project/index.html#results",
+    "title": "Identifying Marine Areas At Risk for Whale Disturbance in Southern California",
+    "section": "Results",
+    "text": "Results\n\nSpecific areas likely exist in the marine area between the Port of Hueneme and Santa Cruz Island that are at risk of contributing to the disturbance of North Pacific Blue Whale populations.\nThese areas align with the widely used north and south bound shipping routes.\nExtra precautions need to be taken in these high vessel volume areas to reduce interference with migrating blue whales."
+  },
+  {
+    "objectID": "posts/gis project/index.html#figures",
+    "href": "posts/gis project/index.html#figures",
+    "title": "Identifying Marine Areas At Risk for Whale Disturbance in Southern California",
+    "section": "Figures",
+    "text": "Figures\n\n\n\nFigure 2: Continuous surface of vessel-traffic influence created using Inverse Distance Weighted (IDW) interpolation around statistically significant traffic hotspots. The surface reflects the potential acoustic disturbance zone extending \\~4 km from dense traffic areas. Higher values (in red) represent stronger potential influence from vessel activity.\n\n\n\n\n\nFigure 3: Spatial risk surface created by multiplying whale sighting counts per 1 km² cell with IDW-derived vessel disturbance values. The resulting risk score highlights areas of greatest overlap between migrating Blue Whales and vessel activity. Warmer colors represent higher potential for acoustic disturbance or ship strike. This model identifies high-priority zones for conservation or traffic mitigation."
+  },
+  {
+    "objectID": "posts/gis project/index.html#acknowledgements",
+    "href": "posts/gis project/index.html#acknowledgements",
+    "title": "Identifying Marine Areas At Risk for Whale Disturbance in Southern California",
+    "section": "Acknowledgements",
+    "text": "Acknowledgements\nSpecial thanks to Professors Kedron, Dodge, and Baik, along with the UCSB Department of Geography, for providing the instruction, guidance, and resources neccisary for the completion of this research project.\nI would also like to thank my group mates Gabrielle Domingo and Christine Chen for their hard work on this project."
   }
 ]

@@ -6,8 +6,11 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
+<meta name="author" content="Christopher Kiorlinski">
+<meta name="dcterms.date" content="2025-06-05">
+<meta name="description" content="A captsone research project using ArcGIS Pro">
 
-<title>My Interests – Christopher Kiorlinski</title>
+<title>Identifying Marine Areas At Risk for Whale Disturbance in Southern California – Christopher Kiorlinski</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -23,22 +26,25 @@ ul.task-list li input[type="checkbox"] {
 </style>
 
 
-<script src="site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="site_libs/quarto-nav/headroom.min.js"></script>
-<script src="site_libs/clipboard/clipboard.min.js"></script>
-<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="site_libs/quarto-search/fuse.min.js"></script>
-<script src="site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="./">
-<script src="site_libs/quarto-html/quarto.js"></script>
-<script src="site_libs/quarto-html/popper.min.js"></script>
-<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="site_libs/quarto-html/anchor.min.js"></script>
-<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<script src="../../site_libs/quarto-html/quarto.js"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script src="../../site_libs/quarto-contrib/glightbox/glightbox.min.js"></script>
+<link href="../../site_libs/quarto-contrib/glightbox/glightbox.min.css" rel="stylesheet">
+<link href="../../site_libs/quarto-contrib/glightbox/lightbox.css" rel="stylesheet">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -68,7 +74,7 @@ ul.task-list li input[type="checkbox"] {
 }</script>
 
 
-<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="../../styles.css">
 </head>
 
 <body class="nav-fixed">
@@ -78,7 +84,7 @@ ul.task-list li input[type="checkbox"] {
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
-    <a class="navbar-brand" href="./index.html">
+    <a class="navbar-brand" href="../../index.html">
     <span class="navbar-title">Christopher Kiorlinski</span>
     </a>
   </div>
@@ -89,23 +95,23 @@ ul.task-list li input[type="checkbox"] {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link" href="./index.html"> 
+    <a class="nav-link" href="../../index.html"> 
 <span class="menu-text">Home</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./about.html"> 
+    <a class="nav-link" href="../../about.html"> 
 <span class="menu-text">About Me</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link active" href="./hobbies.html" aria-current="page"> 
+    <a class="nav-link" href="../../hobbies.html"> 
 <span class="menu-text">My Interests</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./projectpage.html"> 
+    <a class="nav-link" href="../../projectpage.html"> 
 <span class="menu-text">My Projects</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./resume.html"> 
+    <a class="nav-link" href="../../resume.html"> 
 <span class="menu-text">Resume</span></a>
   </li>  
 </ul>
@@ -124,8 +130,13 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#environmental-microbiology" id="toc-environmental-microbiology" class="nav-link active" data-scroll-target="#environmental-microbiology">Environmental Microbiology</a></li>
-  <li><a href="#advanced-plastic-recycling-via-pyrolysis" id="toc-advanced-plastic-recycling-via-pyrolysis" class="nav-link" data-scroll-target="#advanced-plastic-recycling-via-pyrolysis">Advanced Plastic Recycling via Pyrolysis</a></li>
+  <li><a href="#poster" id="toc-poster" class="nav-link active" data-scroll-target="#poster">Poster</a></li>
+  <li><a href="#digital-artifact-ersi-story-map" id="toc-digital-artifact-ersi-story-map" class="nav-link" data-scroll-target="#digital-artifact-ersi-story-map">Digital Artifact: Ersi Story Map</a></li>
+  <li><a href="#project-description" id="toc-project-description" class="nav-link" data-scroll-target="#project-description">Project Description</a></li>
+  <li><a href="#research-question" id="toc-research-question" class="nav-link" data-scroll-target="#research-question">Research Question</a></li>
+  <li><a href="#figures" id="toc-figures" class="nav-link" data-scroll-target="#figures">Figures</a></li>
+  <li><a href="#results" id="toc-results" class="nav-link" data-scroll-target="#results">Results</a></li>
+  <li><a href="#acknowledgements" id="toc-acknowledgements" class="nav-link" data-scroll-target="#acknowledgements">Acknowledgements</a></li>
   </ul>
 </nav>
     </div>
@@ -134,14 +145,31 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">My Interests</h1>
+<h1 class="title">Identifying Marine Areas At Risk for Whale Disturbance in Southern California</h1>
 </div>
 
+<div>
+  <div class="description">
+    A captsone research project using ArcGIS Pro
+  </div>
+</div>
 
 
 <div class="quarto-title-meta column-page-left">
 
+    <div>
+    <div class="quarto-title-meta-heading">Author</div>
+    <div class="quarto-title-meta-contents">
+             <p>Christopher Kiorlinski </p>
+          </div>
+  </div>
     
+    <div>
+    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">June 5, 2025</p>
+    </div>
+  </div>
   
     
   </div>
@@ -151,30 +179,57 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<section id="what-drives-me" class="level5">
-<h5 class="anchored" data-anchor-id="what-drives-me">What Drives Me</h5>
-<p>In my opinion, it is the passion of the environmentalist that is their greatest weapon. It is what keeps us vitalized and ready to tackle problems at an immense scale despite the overwhelming amount of depressing and upsetting information that we are privy to. In the face of this dread, environmentalists such as myself only have our passion and hope for the future to hold on to and give comfort. In a field as volatile and immediately relevant as our global environmental systems, whether it be climate, ecology, or energy, there is thankfully a lot to be passionate about. Here are some of the topics that drive me in this field.</p>
-</section>
-<section id="environmental-microbiology" class="level2">
-<h2 class="anchored" data-anchor-id="environmental-microbiology">Environmental Microbiology</h2>
-<p>Environmental microbiology investigates how the interactions of microorganisms with each other and their environment shape microbial communities and their roles in ecosystems. This field investigate these microorganisms as both agents of environmental degradation and potential solutions through bioremediation, although I am primarily interested in the bioremediation aspect. Through cultivation of specific environments or genetic editing, microorganisms can achieve amazing feats, such as pollutant removal or energy production.</p>
-<p>The primary application of this that I am interested in is anaerobic digestion as a method of dually producing energy and reducing landfill waste. This natural process consists of a series of biochemical reactions where bacteria break down organic matter of any substrate into a gaseous mixture (CH4, CO2, H2, H2S, etc.) in the absence of free oxygen. The main byproduct of this process is biogas, a mix of methane and carbon dioxide, which can be used for power or heat generation. The digested solid waste, called digestate, can be separated into liquid and solid streams, both of which contain valuable plant nutrients that can be used as fertilizer in agricultural applications.</p>
+<p>This research was the capstone project for the Geographic Information Systems/GIS course at UCSB. The instructor that directed this project was Professor Peter Kedron of the Geography department, alongside his TA team of graduate students.</p>
+<p>After the research was completed on ArcGIS, a poster symposium was held at Ellison Hall, home of the geography department at UCSB. Attendees included instructors, students, and local professionals.</p>
+<section id="poster" class="level2">
+<h2 class="anchored" data-anchor-id="poster">Poster</h2>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="photos/anaerobic.png" class="img-fluid figure-img" style="width:8in"></p>
-<figcaption>Example Diagram of Digestor</figcaption>
+<p><a href="gisposter.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-1" title="GIS Research Poster"><img src="gisposter.jpg" class="img-fluid figure-img" alt="GIS Research Poster"></a></p>
+<figcaption>GIS Research Poster</figcaption>
 </figure>
 </div>
 </section>
-<section id="advanced-plastic-recycling-via-pyrolysis" class="level2">
-<h2 class="anchored" data-anchor-id="advanced-plastic-recycling-via-pyrolysis">Advanced Plastic Recycling via Pyrolysis</h2>
-<p>Pyrolysis is a thermochemical recycling method that decomposes plastic waste at extreme temperatures in an anaerobic setting to break down polymers into useful compounds, such as pyrolysis oil, fuel gas, and carbon char. Although this process is still new and facing backlash for several downsides, including emissions, scalability, and economic viability, I believe that this technology is an important piece of the circular economy needed to maintain human life on this planet.</p>
+<section id="digital-artifact-ersi-story-map" class="level2">
+<h2 class="anchored" data-anchor-id="digital-artifact-ersi-story-map">Digital Artifact: Ersi Story Map</h2>
+<p>In addition to our physical poster, our team created an online visual storymap: <a href="https://arcg.is/1ym8jr2" class="uri">https://arcg.is/1ym8jr2</a></p>
+</section>
+<section id="project-description" class="level2">
+<h2 class="anchored" data-anchor-id="project-description">Project Description</h2>
+<p>North American Blue Whales, Balaenoptera musculus, are the largest endangered species that inhabit the waters of the California coast (Fisheries, 2020). Blue Whales, along with other large mammals, face escalating threats due to human impact such as overfishing, underwater noise pollution, and ship strikes due to maritime activity (McKenna, 2011).</p>
+<p>This project investigates areas of Blue Whale migration in the marine corridor between the Port of Hueneme and Santa Cruz Island– a marine area known for high vessel activity. By analyzing these two variables, our group aims to create visualizations that may aid in identifying high risk areas for blue whales and shipping vessels.</p>
+</section>
+<section id="research-question" class="level2">
+<h2 class="anchored" data-anchor-id="research-question">Research Question</h2>
+<p>In the marine area between the Port of Hueneme and Santa Cruz Island, what areas of maritime commercial activity are at risk of contributing to the disturbance of North Pacific Blue Whale populations?</p>
+</section>
+<section id="figures" class="level2">
+<h2 class="anchored" data-anchor-id="figures">Figures</h2>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="photos/pyrolysis.webp" class="img-fluid figure-img" style="width:8in"></p>
-<figcaption>Pyrolysis Diagram</figcaption>
+<p><a href="figure2.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-2" title="Figure 2: Continuous surface of vessel-traffic influence created using Inverse Distance Weighted (IDW) interpolation around statistically significant traffic hotspots. The surface reflects the potential acoustic disturbance zone extending \~4 km from dense traffic areas. Higher values (in red) represent stronger potential influence from vessel activity."><img src="figure2.jpg" class="img-fluid figure-img" style="width:5.33in" alt="Figure 2: Continuous surface of vessel-traffic influence created using Inverse Distance Weighted (IDW) interpolation around statistically significant traffic hotspots. The surface reflects the potential acoustic disturbance zone extending \~4 km from dense traffic areas. Higher values (in red) represent stronger potential influence from vessel activity."></a></p>
+<figcaption>Figure 2: Continuous surface of vessel-traffic influence created using Inverse Distance Weighted (IDW) interpolation around statistically significant traffic hotspots. The surface reflects the potential acoustic disturbance zone extending \~4 km from dense traffic areas. Higher values (in red) represent stronger potential influence from vessel activity.</figcaption>
 </figure>
 </div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="figure3.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-3" title="Figure 3: Spatial risk surface created by multiplying whale sighting counts per 1 km² cell with IDW-derived vessel disturbance values. The resulting risk score highlights areas of greatest overlap between migrating Blue Whales and vessel activity. Warmer colors represent higher potential for acoustic disturbance or ship strike. This model identifies high-priority zones for conservation or traffic mitigation."><img src="figure3.jpg" class="img-fluid figure-img" style="width:5.33in" alt="Figure 3: Spatial risk surface created by multiplying whale sighting counts per 1 km² cell with IDW-derived vessel disturbance values. The resulting risk score highlights areas of greatest overlap between migrating Blue Whales and vessel activity. Warmer colors represent higher potential for acoustic disturbance or ship strike. This model identifies high-priority zones for conservation or traffic mitigation."></a></p>
+<figcaption>Figure 3: Spatial risk surface created by multiplying whale sighting counts per 1 km² cell with IDW-derived vessel disturbance values. The resulting risk score highlights areas of greatest overlap between migrating Blue Whales and vessel activity. Warmer colors represent higher potential for acoustic disturbance or ship strike. This model identifies high-priority zones for conservation or traffic mitigation.</figcaption>
+</figure>
+</div>
+</section>
+<section id="results" class="level2">
+<h2 class="anchored" data-anchor-id="results">Results</h2>
+<ul>
+<li>Specific areas likely exist in the marine area between the Port of Hueneme and Santa Cruz Island that are at risk of contributing to the disturbance of North Pacific Blue Whale populations.</li>
+<li>These areas align with the widely used north and south bound shipping routes.</li>
+<li>Extra precautions need to be taken in these high vessel volume areas to reduce interference with migrating blue whales.</li>
+</ul>
+</section>
+<section id="acknowledgements" class="level2">
+<h2 class="anchored" data-anchor-id="acknowledgements">Acknowledgements</h2>
+<p>Special thanks to Professors Kedron, Dodge, and Baik, along with the UCSB Department of Geography, for providing the instruction, guidance, and resources neccisary for the completion of this research project.</p>
+<p>I would also like to thank my group mates Gabrielle Domingo and Christine Chen for their hard work on this project.</p>
 
 
 </section>
@@ -601,6 +656,38 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 });
 </script>
 </div> <!-- /content -->
+<script>var lightboxQuarto = GLightbox({"openEffect":"zoom","closeEffect":"zoom","selector":".lightbox","loop":false,"descPosition":"bottom"});
+(function() {
+  let previousOnload = window.onload;
+  window.onload = () => {
+    if (previousOnload) {
+      previousOnload();
+    }
+    lightboxQuarto.on('slide_before_load', (data) => {
+      const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+      const href = trigger.getAttribute('href');
+      if (href !== null) {
+        const imgEl = window.document.querySelector(`a[href="${href}"] img`);
+        if (imgEl !== null) {
+          const srcAttr = imgEl.getAttribute("src");
+          if (srcAttr && srcAttr.startsWith("data:")) {
+            slideConfig.href = srcAttr;
+          }
+        }
+      } 
+    });
+  
+    lightboxQuarto.on('slide_after_load', (data) => {
+      const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(slideNode);
+      }
+    });
+  
+  };
+  
+})();
+          </script>
 
 
 
