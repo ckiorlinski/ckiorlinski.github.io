@@ -15,8 +15,10 @@ website:
 
 format:
   html:
-    theme: flatly
-    css: styles.scss     
+    theme:
+      - flatly
+      - styles.scss   # SCSS file with your variables
+    mainfont: "Funnel Sans"
     toc: true
     page-layout: full
 

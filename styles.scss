@@ -15,24 +15,25 @@ $navbar-hl:     $white;
 // body font Funnel Sans
 body {
   font-family: 'Funnel Sans', sans-serif;
+  background-color: $cream;
 }
 
-// links, headings font
-h1, h2, h3, h4, h5, h6,
-.navbar, .navbar a {
-  font-family: 'Funnel Sans', sans-serif !important;
-  color: $navbar-hl !important;
-}
-
-body {
-  background-color: #FBF9F3 !important;  
-}
-
-.navbar {
-  background-color: #FF5500 !important;  
-}
-
+/* Apply Funnel Sans and white text ONLY inside the navbar */
+.navbar,
 .navbar a,
 .navbar-brand {
-  color: #FFF !important;                
+  font-family: 'Funnel Sans', sans-serif;
+  background-color: $sunset-orange;
+  color: $white !important;
+}
+
+/* Optional: Make sure links in navbar stay white even on hover */
+.navbar a:hover {
+  color: $white !important;
+}
+
+/* Allow normal headings to use default or inherited color */
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Funnel Sans', sans-serif;
+  color: black; // Or a darker readable color
 }
