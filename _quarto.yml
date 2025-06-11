@@ -16,7 +16,7 @@ website:
 format:
   html:
     theme: flatly
-    css: styles.scss     # <-- compile this SCSS _after_ the theme
+    css: styles.scss     
     toc: true
     page-layout: full
 

@@ -8,9 +8,9 @@ toc: true
 
 ##### Hello!
 
-I was born in Oxnard, California to two Bulgarian immigrant parents who worked their butts off to provide for my brother and I. Education was the biggest priority in our house, and that mindset of diligence and resilience eventually led to me studying environmental science at my dream school, the University of California Santa Barbara. As a recent graduate, I am very excited to enter the world of professional environmentalism and hopefully make some dents in what I consider the world's most pressing issues!
+I was born in Oxnard, California to two Bulgarian immigrant parents who worked their butts off to provide for my brother and I after coming to this country with no money or English skills. Education was the biggest priority in our house; that mindset of diligence and resilience eventually led to me studying environmental science at my dream school, the University of California, Santa Barbara. As a recent graduate, I am very excited to enter the world of professional environmentalism and hopefully make some dents in what I consider the world's most pressing issues!
 
-### Conservation and Restoration Work
+## Conservation and Restoration Work
 
 Although I always saw myself as more of a lab scientist, attending UCSB and working as a Conservation and Restoration Intern at Coal Oil Point Reserve introduced me to the wonderful world of field work! From local spots like Sands Beach in Isla Vista to more intense locations like the Mojave Desert, I have had the pleasure of working side by side with environmental experts and fellow students in a multitude of conditions.
 
@@ -18,7 +18,7 @@ Although I always saw myself as more of a lab scientist, attending UCSB and work
 
 ![Restoration at Elwood Marine Terrace with COPR](photos/github_copr.jpg){width="4in"}
 
-### Culinary Arts
+## Culinary Arts
 
 One of my favorite hobbies as long as I can remember has been cooking and expressing myself through food. Beyond the end product that hopefully tastes good, cooking functions as a social activity that allows me to spend time and learn from my parents or peers. I also find it very gratifying creating something delicious for the people who I care about. It helps being the child of immigrants, as I have access to the entire world of Bulgarian cooking at my fingertips, alongside the hundreds of cultural recipes that litter the internet. Some of my favorite cultures to pull recipes from include Indian, Thai, Bulgarian, Chinese, and Mexican.
 
@@ -26,7 +26,7 @@ One of my favorite hobbies as long as I can remember has been cooking and expres
 
 ![Rasam and Aloo Fry with Jasmine Rice](photos/rasamaloo.jpg){width="4in"}
 
-### My Dog
+## My Dog
 
 We saved our dog, Jesso, from a kill shelter after a family friend could no longer take care of them. He is a Cairn Terrer and is almost 10 years old now. We welcomed him into our family at the end of 2016. He is very cute and we love him very much.
 

@@ -53,25 +53,25 @@ clean_names() |> #cleaning names
 
 ```{r}
 # creating summary table
-summary_table <- reaction_time_data %>%
-  group_by(SleepBin) %>%
-  summarize(
-    mean_rt = mean(reaction_speed_ms, na.rm = TRUE),
-    se      = sd(reaction_speed_ms, na.rm = TRUE) / sqrt(n()),
-    n       = n(),
+summary_table <- reaction_time_data |> #creating new item using dataset
+  group_by(SleepBin) |> #grouping data by bins
+  summarize( #summerizing data
+    mean_rt = mean(reaction_speed_ms, na.rm = TRUE), #mean reaction time
+    se      = sd(reaction_speed_ms, na.rm = TRUE) / sqrt(n()), #standard error
+    n       = n(), # number of data points
     .groups = "drop"
-  ) %>%
-  mutate(
-    ci_low  = mean_rt - qt(0.975, n - 1) * se,
-    ci_high = mean_rt + qt(0.975, n - 1) * se,
+  ) |> 
+  mutate( #creating/adjusting columns
+    ci_low  = mean_rt - qt(0.975, n - 1) * se, #calculating low end of CI
+    ci_high = mean_rt + qt(0.975, n - 1) * se, #high end of CI
     # round to one decimal place
     mean_rt = round(mean_rt, 1),
     ci_low  = round(ci_low,  1),
     ci_high = round(ci_high, 1)
-  ) %>%
+  ) |> 
   mutate(
-    marker = paste0(
-      "Type: ", SleepBin, "<br>",
+    marker = paste0( #adding marker column
+      "Type: ", SleepBin, "<br>", 
       "Mean: ", mean_rt, "<br>",
       "95% CI: ", ci_low, "–", ci_high
     )
@@ -87,7 +87,7 @@ This function was used to create a hovering tooltip for the interactive figure. 
 This function will be used again in the [Data Visualization] code block.
 :::
 
-### Interactive data table
+## Interactive data table
 
 ::: {.callout-note collapse="true"}
 ## Table Column Definitions
@@ -111,7 +111,6 @@ stress_level: self described stress level for the coming day, including classes,
 2: moderate stress day
 
 3: high stress day
-
 :::
 
 ```{r}
@@ -139,39 +138,39 @@ reactiontime_marker <- reaction_time_data |>  #new object using data for marker
 reactiontime_static <- ggplot() + #creating graphic
   geom_jitter( #creating jitterplot
     data = reactiontime_marker, #using reaction time data
-    aes(
-      x = SleepBin, 
-      y = reaction_speed_ms,
-      color = SleepBin,
-      text = paste0(
+    aes( #setting axis
+      x = SleepBin, #sleep bin x axis
+      y = reaction_speed_ms, #reaction speed y axis
+      color = SleepBin, #color by sleepbin
+      text = paste0( #setting marker text
         "Sleep bin: ", SleepBin, "\n",
         "RT: ", reaction_speed_ms, " ms"
       )
     ),
-    width = 0.2, alpha = 0.6, size = 2
+    width = 0.2, alpha = 0.6, size = 2 #jitter point settings
   ) +
   geom_point( #setting mean point
     data = summary_table, # summary table data
-    aes(
-      x = SleepBin, 
-      y = mean_rt,
-      text = paste0(
+    aes( #setting axis
+      x = SleepBin, #bin x axis
+      y = mean_rt, #mean reaction time y axis
+      text = paste0( #setting marker text
         "Sleep bin: ", SleepBin, "\n",
         "Mean RT: ", mean_rt, " ms\n",
         "95% CI: ", ci_low, "–", ci_high, " ms"
       )
     ),
-    color = "black", shape = 18, size = 2
+    color = "black", shape = 18, size = 2 #point settings
   ) +
-  geom_errorbar(
-    data = summary_table,
-    aes(
-      x = SleepBin,
-      ymin = ci_low, 
-      ymax = ci_high,
+  geom_errorbar( #creation of error bar
+    data = summary_table, #using summary table data
+    aes( #setting axis
+      x = SleepBin, #sleep bin x axis
+      ymin = ci_low, #low end of error bar = CI Low
+      ymax = ci_high, #high end of error bar = CI High
       text = NULL    # no hover text on the bars themselves
     ),
-    width = 0.1, color = "black"
+    width = 0.1, color = "black" #error bar settings
   ) +
   scale_color_manual( #setting colors
     values = c(
@@ -191,19 +190,18 @@ reactiontime_static <- ggplot() + #creating graphic
   theme(plot.caption.position = "plot", # position of caption
         plot.caption = element_text(hjust = .5))
 
-reactiontime_interactive <- ggplotly(
-  reactiontime_static,
+reactiontime_interactive <- ggplotly( #using plotly for interactive graph
+  reactiontime_static, #using static graph as base
   tooltip = "text"
 ) |> 
-  # 3) Now apply Plotly’s layout
   plotly::layout(
-    font = list(family = "Times"),
+    font = list(family = "Times"), #font
     hoverlabel = list(
       font = list(
-        family = "Times",
-        size   = 13,
-        color  = "#FFFFFF",
-        align  = "left"
+        family = "Times", #font
+        size   = 13, #font size
+        color  = "#FFFFFF", #color
+        align  = "left" #graph allignment
       )
     )
   )
