@@ -1,15 +1,15 @@
 /* css styles */
 
 // colors
-$purple: #9900FF
+$sunset-orange: #FA5F55
 $cream: #FBF9F3
-$dark-grey: #64605f
+$white: #FFF;
 
 // Base document colors
-$navbar-bg: $purple;
+$navbar-bg: $sunset-orange;
 $navbar-hl: $cream;
 $body-bg: $cream;
-$link-color: $purple; 
+$link-color: $sunset-orange; 
 
 /*-- scss:rules --*/
 
