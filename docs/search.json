@@ -25,7 +25,7 @@
     "href": "projectpage.html",
     "title": "My Projects",
     "section": "",
-    "text": "A collection of some of the projects I’ve been working on. If you have any questions about the work listed here, please contact me with the links on the landing page and I’ll happily answer!\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nIdentifying Marine Areas At Risk for Whale Disturbance in Southern California\n\n\n\n\n\nA captsone research project using ArcGIS Pro\n\n\n\n\n\nJun 5, 2025\n\n\nChristopher Kiorlinski\n\n\n\n\n\n\nNo matching items"
+    "text": "A collection of some of the projects I’ve been working on. If you have any questions about the work listed here, please contact me with the links on the landing page and I’ll happily answer!\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nIdentifying Marine Areas At Risk for Whale Disturbance in Southern California\n\n\n\n\n\nA captsone research project using ArcGIS Pro\n\n\n\n\n\nJun 5, 2025\n\n\nChristopher Kiorlinski\n\n\n\n\n\n\n\n\n\n\n\n\nPersonal Data Project\n\n\n\n\n\nStatistical analysis conducted in R/RStudio based on self-recorded data\n\n\n\n\n\nJun 12, 2025\n\n\nChristopher Kiorlinski\n\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "posts/gis project/index.html",
@@ -96,5 +96,19 @@
     "title": "Identifying Marine Areas At Risk for Whale Disturbance in Southern California",
     "section": "Acknowledgements",
     "text": "Acknowledgements\nSpecial thanks to Professors Kedron, Dodge, and Baik, along with the UCSB Department of Geography, for providing the instruction, guidance, and resources neccisary for the completion of this research project.\nI would also like to thank my group mates Gabrielle Domingo and Christine Chen for their hard work on this project."
+  },
+  {
+    "objectID": "posts/193ds reaction time/index.html",
+    "href": "posts/193ds reaction time/index.html",
+    "title": "Personal Data Project",
+    "section": "",
+    "text": "This statistical analysis was assigned in my ENVS 193DS: Statistics for Environmental Science class.\nThe question being analyzed was: Does the amount of sleep I get affect my reaction speed when I wake up?\nThe data was collected by myself and stored in an Excel sheet for later analysis in R Studio. Every morning, the first thing I would do is take a reaction speed test on my mobile device. These reaction speed scores were saved and recorded, then compared to the amount of sleep I had goten that night to see if a relationship existed. Sleep times were binned into three bins: short (&lt;7 h), moderate (7–8 h), and long (&gt;8 h), and then mean sleep time was compared across bins."
+  },
+  {
+    "objectID": "posts/193ds reaction time/index.html#set-up",
+    "href": "posts/193ds reaction time/index.html#set-up",
+    "title": "Personal Data Project",
+    "section": "Set up",
+    "text": "Set up\n\n# reading in packages\nlibrary(tidyverse) # general use\nlibrary(here) # file organization\nlibrary(janitor) # cleaning data frames\nlibrary(gt) # table making\nlibrary(readxl) # reading excel files\nlibrary(ggeffects) # getting model predictions\n\nreaction_time_data &lt;- read.csv(\"C:/Users/prais/OneDrive/github/ENVS-193DS_homework-03/data/193ds spread - Sheet1.csv\") |&gt; #adding table to environment \nclean_names() |&gt; #cleaning names\n     mutate(\n    sleep_duration_hrs = period_to_seconds(hm(sleep_duration_hh_ss)) / 3600, #changing format of sleep hours data\n    Sleep_Duration_c   = scale(sleep_duration_hrs, center = TRUE, scale = FALSE), # scaling sleep duration colummn\n    Sleep_Location     = factor(sleep_location), # making sleep location a factor\n    Stress_Level       = factor(stress_level), # making stress level a factor\n    Date               = as.Date(date, format = \"%Y-%m-%d\")) |&gt; # reformating date data\n  mutate(\n    SleepBin = case_when( #creating bins\n      sleep_duration_hrs &lt; 7  ~ \"Short (&lt;7 h)\", #creating short bin\n      sleep_duration_hrs &lt;= 8 ~ \"Moderate (7–8 h)\", #creating moderate bin\n      TRUE                     ~ \"Long (&gt;8 h)\"), #creating long bin\n    SleepBin = factor( #creating order of factors\n      SleepBin,\n      levels = c(\"Short (&lt;7 h)\", \"Moderate (7–8 h)\", \"Long (&gt;8 h)\"))) |&gt; # ordering sleep bin factors\n      select(SleepBin, Date, sleep_duration_hh_ss, reaction_speed_ms, x5_test_avg_ms, sleep_location, stress_level) #selecting important info"
   }
 ]

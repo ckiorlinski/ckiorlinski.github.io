@@ -3,7 +3,6 @@ title: "My Projects"
 listing:
   contents: posts
   type: default
-  categories: true
 search: true
 page-layout: full
 format: html
